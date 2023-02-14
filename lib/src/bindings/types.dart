@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
@@ -107,7 +109,7 @@ class TfLiteXNNPackDelegateOptions extends Struct {
 
   static Pointer<TfLiteXNNPackDelegateOptions> allocate(int numThreads) {
     final result = calloc<TfLiteXNNPackDelegateOptions>();
-    result.ref..numThreads = numThreads;
+    result.ref.numThreads = numThreads;
     return result;
   }
 }

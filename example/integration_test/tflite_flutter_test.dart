@@ -11,7 +11,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:tflite_flutter/tflite_flutter.dart' as tfl;
+import 'package:tflite_flutter_plugin/tflite_flutter_plugin.dart' as tfl;
 
 final dataFileName = 'permute_uint8.tflite';
 final missingFileName = 'missing.tflite';

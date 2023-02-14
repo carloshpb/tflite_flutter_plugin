@@ -1,6 +1,5 @@
 import 'dart:ffi';
 import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:ffi/ffi.dart';
 import 'package:flutter/services.dart';
@@ -123,7 +122,7 @@ class Interpreter {
   ///
   /// Typically used for passing interpreter between isolates.
   factory Interpreter.fromAddress(int address,
-      {bool allocated: false, bool deleted: false}) {
+      {bool allocated = false, bool deleted = false}) {
     final interpreter = Pointer<TfLiteInterpreter>.fromAddress(address);
     return Interpreter._(interpreter)
       .._deleted = deleted
@@ -242,9 +241,7 @@ class Interpreter {
 
   /// Gets the input Tensor for the provided input index.
   Tensor getInputTensor(int index) {
-    if (_inputTensorsCount == null) {
-      _inputTensorsCount = tfLiteInterpreterGetInputTensorCount(_interpreter);
-    }
+    _inputTensorsCount ??= tfLiteInterpreterGetInputTensorCount(_interpreter);
     if (index < 0 || index >= _inputTensorsCount!) {
       throw ArgumentError('Invalid input Tensor index: $index');
     }
@@ -259,9 +256,7 @@ class Interpreter {
 
   /// Gets the output Tensor for the provided output index.
   Tensor getOutputTensor(int index) {
-    if (_outputTensorsCount == null) {
-      _outputTensorsCount = tfLiteInterpreterGetOutputTensorCount(_interpreter);
-    }
+    _outputTensorsCount ??= tfLiteInterpreterGetOutputTensorCount(_interpreter);
     if (index < 0 || index >= _outputTensorsCount!) {
       throw ArgumentError('Invalid output Tensor index: $index');
     }
@@ -312,5 +307,4 @@ class Interpreter {
 
   //TODO: (JAVA) void modifyGraphWithDelegate(Delegate delegate)
   //TODO: (JAVA) void resetVariableTensors()
-
 }

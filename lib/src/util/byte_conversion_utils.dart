@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 import 'list_shape_extension.dart';
-import 'package:tflite_flutter/src/bindings/types.dart';
+import 'package:tflite_flutter_plugin/src/bindings/types.dart';
 
 class ByteConversionUtils {
   static Uint8List convertObjectToBytes(Object o, TfLiteType tfliteType) {

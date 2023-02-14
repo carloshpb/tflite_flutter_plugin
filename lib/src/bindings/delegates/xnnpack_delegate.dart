@@ -1,3 +1,4 @@
+// ignore_for_file: camel_case_types
 
 import 'dart:ffi';
 
@@ -16,8 +17,8 @@ Pointer<TfLiteDelegate> Function(Pointer<TfLiteXNNPackDelegateOptions> options)
             'TfLiteXNNPackDelegateCreate')
         .asFunction();
 
-typedef _TfLiteXNNPackDelegateCreate_native_t = Pointer<TfLiteDelegate> Function(
-    Pointer<TfLiteXNNPackDelegateOptions> options);
+typedef _TfLiteXNNPackDelegateCreate_native_t = Pointer<TfLiteDelegate>
+    Function(Pointer<TfLiteXNNPackDelegateOptions> options);
 
 // Destroys a delegate created with `TfLiteXNNPackDelegateCreate` call.
 void Function(Pointer<TfLiteDelegate>) tfliteXNNPackDelegateDelete = tflitelib
@@ -29,9 +30,11 @@ typedef _TfLiteXNNPackDelegateDelete_native_t = Void Function(
     Pointer<TfLiteDelegate> delegate);
 
 /// Default Options
-TfLiteXNNPackDelegateOptions Function() tfLiteXNNPackDelegateOptionsDefault = tflitelib
-    .lookup<NativeFunction<_TfLiteXNNPackDelegateOptions_native_t>>(
-        'TfLiteXNNPackDelegateOptionsDefault')
-    .asFunction();
+TfLiteXNNPackDelegateOptions Function() tfLiteXNNPackDelegateOptionsDefault =
+    tflitelib
+        .lookup<NativeFunction<_TfLiteXNNPackDelegateOptions_native_t>>(
+            'TfLiteXNNPackDelegateOptionsDefault')
+        .asFunction();
 
-typedef _TfLiteXNNPackDelegateOptions_native_t = TfLiteXNNPackDelegateOptions Function();
+typedef _TfLiteXNNPackDelegateOptions_native_t = TfLiteXNNPackDelegateOptions
+    Function();

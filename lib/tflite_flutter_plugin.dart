@@ -1,9 +1,7 @@
-// Copyright (c) 2019, the Dart project authors. Please see the AUTHORS file
-// for details. All rights reserved. Use of this source code is governed by a
-// BSD-style license that can be found in the LICENSE file.
-
 /// TensorFlow Lite for Flutter
 library tflite_flutter;
+
+//import 'tflite_flutter_plugin_platform_interface.dart';
 
 import 'package:ffi/ffi.dart';
 
@@ -21,5 +19,11 @@ export 'src/tensor.dart';
 export 'src/util/list_shape_extension.dart';
 export 'src/util/byte_conversion_utils.dart';
 
-/// tflite version information.
+// class TfliteFlutterPlugin {
+//   Future<String?> getPlatformVersion() {
+//     return TfliteFlutterPluginPlatform.instance.getPlatformVersion();
+//   }
+
+// }
+
 String get version => tfLiteVersion().toDartString();

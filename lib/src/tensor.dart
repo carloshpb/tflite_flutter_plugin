@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import 'package:ffi/ffi.dart';
 import 'package:quiver/check.dart';
-import 'package:tflite_flutter/src/util/byte_conversion_utils.dart';
+import 'package:tflite_flutter_plugin/src/util/byte_conversion_utils.dart';
 
 import 'bindings/tensor.dart';
 import 'bindings/types.dart';
@@ -91,7 +91,7 @@ class Tensor {
 
   /// Returns the number of dimensions of a multi-dimensional array, otherwise 0.
   static int computeNumDimensions(Object? o) {
-    if (o == null || !(o is List)) {
+    if (o == null || o is! List) {
       return 0;
     }
     if (o.isEmpty) {

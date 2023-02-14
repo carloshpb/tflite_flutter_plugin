@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
@@ -107,5 +109,5 @@ TfLiteQuantizationParams Function(Pointer<TfLiteTensor> tensor)
             'TfLiteTensorQuantizationParams')
         .asFunction();
 
-typedef _TfLiteTensorQuantizationParams_native_t
-    = TfLiteQuantizationParams Function(Pointer<TfLiteTensor> tensor);
+typedef _TfLiteTensorQuantizationParams_native_t = TfLiteQuantizationParams
+    Function(Pointer<TfLiteTensor> tensor);

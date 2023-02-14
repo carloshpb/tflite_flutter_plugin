@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
@@ -59,9 +61,7 @@ typedef _TfLiteInterpreterOptionsSetErrorReporter_native_t = Void Function(
 );
 
 /// Custom error reporter function for interpreter execution.
-typedef Reporter = Void Function(
-    Pointer<Void> userData,
-    Pointer<Utf8> format,
+typedef Reporter = Void Function(Pointer<Void> userData, Pointer<Utf8> format,
     /*va_list*/ Pointer<Void> args);
 
 void Function(Pointer<TfLiteInterpreterOptions> options,
