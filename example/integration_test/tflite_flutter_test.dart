@@ -2,6 +2,8 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// ignore_for_file: avoid_print
+
 @Timeout(Duration(minutes: 1))
 
 import 'dart:io';
@@ -11,16 +13,16 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:tflite_flutter_plugin/tflite_flutter_plugin.dart' as tfl;
+import 'package:tflite_flutter/tflite_flutter.dart' as tfl;
 
-final dataFileName = 'permute_uint8.tflite';
-final missingFileName = 'missing.tflite';
-final badFileName = 'bad_model.tflite';
-final quantFileName = 'mobilenet_quant.tflite';
-final intFileName = 'int32.bin';
-final int64FileName = 'int64.bin';
-final multiInputFileName = 'multi_add.bin';
-final addFileName = 'add.bin';
+const dataFileName = 'permute_uint8.tflite';
+const missingFileName = 'missing.tflite';
+const badFileName = 'bad_model.tflite';
+const quantFileName = 'mobilenet_quant.tflite';
+const intFileName = 'int32.bin';
+const int64FileName = 'int64.bin';
+const multiInputFileName = 'multi_add.bin';
+const addFileName = 'add.bin';
 
 //flutter drive --driver=test_driver/integration_test.dart --target=integration_test/tflite_flutter_test.dart
 void main() {

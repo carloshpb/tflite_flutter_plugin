@@ -45,3 +45,5 @@ void TfLiteXNNPackDelegateDelete(TfLiteDelegate* delegate);
 #endif  // __cplusplus
 
 #endif  // TENSORFLOW_LITE_DELEGATES_XNNPACK_XNNPACK_DELEGATE_H_
+
+

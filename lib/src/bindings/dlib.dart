@@ -1,8 +1,6 @@
 import 'dart:ffi';
 import 'dart:io';
 
-// import 'package:path/path.dart' as Path;
-
 const Set<String> _supported = {'linux', 'mac', 'win'};
 
 String get binaryName {

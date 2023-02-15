@@ -1,16 +1,9 @@
-# tflite_flutter_plugin_example
+# Text Classification Example
 
-Demonstrates how to use the tflite_flutter_plugin plugin.
+Refer to [Medium Blog](https://medium.com/@am15hg/text-classification-using-tensorflow-lite-plugin-for-flutter-3b92f6655982) for detailed tutorial.
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+This basic Text Classification app demonstrates the usage of tflite_flutter_plugin.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![DEMO GIF](demo.gif)

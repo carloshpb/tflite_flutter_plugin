@@ -1,4 +1,4 @@
-group 'com.tfliteflutter.tflite_flutter_plugin'
+group 'com.tfliteflutter.tflite_flutter'
 version '1.0'
 
 buildscript {
@@ -31,5 +31,6 @@ android {
 
     defaultConfig {
         minSdkVersion 16
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"	
     }
 }

@@ -1,4 +1,7 @@
+// import 'package:ffi/ffi.dart';
 // import 'package:plugin_platform_interface/plugin_platform_interface.dart';
+
+// import 'src/bindings/bindings.dart' as bindings;
 
 // import 'tflite_flutter_plugin_method_channel.dart';
 
@@ -8,7 +11,8 @@
 
 //   static final Object _token = Object();
 
-//   static TfliteFlutterPluginPlatform _instance = MethodChannelTfliteFlutterPlugin();
+//   static TfliteFlutterPluginPlatform _instance =
+//       MethodChannelTfliteFlutterPlugin();
 
 //   /// The default instance of [TfliteFlutterPluginPlatform] to use.
 //   ///
@@ -26,4 +30,6 @@
 //   Future<String?> getPlatformVersion() {
 //     throw UnimplementedError('platformVersion() has not been implemented.');
 //   }
+
+//   String get tfLiteVersion => bindings.tfLiteVersion().toDartString();
 // }

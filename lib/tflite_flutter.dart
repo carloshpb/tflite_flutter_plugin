@@ -19,11 +19,13 @@ export 'src/tensor.dart';
 export 'src/util/list_shape_extension.dart';
 export 'src/util/byte_conversion_utils.dart';
 
-// class TfliteFlutterPlugin {
+// class TfliteFlutter {
 //   Future<String?> getPlatformVersion() {
 //     return TfliteFlutterPluginPlatform.instance.getPlatformVersion();
 //   }
 
+//   String get tfLiteVersion =>
+//       TfliteFlutterPluginPlatform.instance.tfLiteVersion;
 // }
 
 String get version => tfLiteVersion().toDartString();

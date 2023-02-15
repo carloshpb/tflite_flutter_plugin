@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import 'package:ffi/ffi.dart';
 import 'package:quiver/check.dart';
-import 'package:tflite_flutter_plugin/src/util/byte_conversion_utils.dart';
+import 'package:tflite_flutter/src/util/byte_conversion_utils.dart';
 
 import 'bindings/tensor.dart';
 import 'bindings/types.dart';

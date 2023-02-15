@@ -1,7 +1,9 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/services.dart';
 
 // Import tflite_flutter
-import 'package:tflite_flutter_plugin/tflite_flutter_plugin.dart';
+import 'package:tflite_flutter/tflite_flutter.dart';
 
 class Classifier {
   // name of the model file
